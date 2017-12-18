@@ -1,0 +1,24 @@
+[package]
+name = "pcsg"
+version = "0.1.0"
+authors = ["mklf <golifang1234@gmail.com>"]
+
+[[bin]]
+name = "pcsg"
+path = "src/main.rs"
+doc = false
+
+[features]
+default = []
+blas = ["blas-sys"]
+
+
+[dependencies]
+rand = "0.3"
+clap = "2.18.0"
+time = "*"
+libc= "*"
+rustc-serialize = "0.3.21"
+bincode = "0.6.0"
+log = "*"
+blas-sys = {version = "*",optional = true,default-features=false,features=["openblas"]}
